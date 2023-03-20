@@ -26,7 +26,7 @@ class Capex:
         if annee_fin > annee_debut:
             self.cout_annuel = montant/(annee_fin - annee_debut)
         else :
-            self.cout_annuel = 0 
+            self.cout_annuel = montant 
         self.duree_amortissement = duree_amortissement
 
 class Opex:
