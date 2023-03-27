@@ -9,9 +9,46 @@ from relife import Weibull
 from utils import *
 pd.options.plotting.backend = "plotly"
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",initial_sidebar_state="collapsed")
 
-st.title("Financement d'un projet de production d'énergie")
+with st.sidebar:
+    st.markdown(
+    '''
+    Cette application a un objectif pédagogique sur le financement d'un projet ENR (ou autre !).<br>
+    Elle vise à placer l'utilisateur à la place d'un porteur de projet. 
+    ''',unsafe_allow_html=True
+    )
+    with st.expander("Définitions",expanded=False):
+        st.markdown(
+        '''
+        <u>CAPEX</u>: Dépense d'investissement, ce type de dépense peut engendrer des baisses d'impôts (<i>via</i> les amortissements) ou des revenus (dans un model RAB / Base d'actifs régulés)<br>
+        <u>OPEX</u> : Dépense d'exploitation, dans cette application les OPEX regroupent toutes les dépenses autres que CAPEX, impôts, frais financiers. <br>
+        <u>Amortissements</u> : L'amortissement comptable d'un investissement pour une entreprise est l'étalement de son coût sur sa durée d'utilisation. Il s'agit d'un flux compable pris en compte dans le calcul des impôts de l'investisseur.
+        ''',unsafe_allow_html=True
+        )
+    st.markdown(
+    '''
+    ## Valeur actualisée nette 
+    '''
+    )
+    st.markdown(
+    '''
+    La <u>valeur actualisée nette</u> pour un taux d'actualisation (r) fixé donne la mesure de rentabilité d'un projet. Elle se définit par l'équation ci-dessous.
+    ''',unsafe_allow_html=True
+    )
+    st.latex(
+        r'''
+        VAN(r) = \sum_{t=n_{0}}^{N} \frac{CF_t}{(1+r)^t} =\sum_{t=n_{0}}^{N} \frac{Recette_t-Dépense_t}{(1+r)^t}
+        '''
+    )
+
+row0_spacer1, row0_1, row0_2, row0_spacer3 = st.columns((.1, 1.5, 1.0, .1))
+with row0_1:
+    st.title("Financement d'un projet de production d'énergie")
+with row0_2:
+    st.text("")
+ #   st.subheader('Streamlit App réalisée par [Robinson Beaucour](https://www.linkedin.com/in/robinson-beaucour-a81403177)')
+    st.markdown("<h3 style='text-align: right'>Streamlit App réalisée par<br> <a href='https://www.linkedin.com/in/robinson-beaucour-a81403177'>Robinson Beaucour</a></h3>", unsafe_allow_html=True)
 
 st.markdown("## Durée du projet")
 cols = st.columns(6)
@@ -32,6 +69,7 @@ with cols[2]:
         help = "Année de fin du projet",
         # label_visibility="collapsed"
         )
+    
 with cols[3]:
     taux_imposition = 1/100* st.number_input("Taux d'imposition", min_value=0, max_value=100,step =1, value = 25, help = "Taux d'imposition sur les société (en %)")
     
@@ -56,7 +94,7 @@ with cols[0]:
                 Capex(
                 montant = -float(st.text_input(
                 "Montant",
-                value = "1000000",
+                value = "100000000",
                 help = "Montant du CAPEX sur l'ensemble de la période",
                 key = f"montant capex {k}"
                 )),
@@ -102,7 +140,7 @@ with cols[1]:
                 Opex(
                 montant= -float(st.text_input(
                 "Montant",
-                value="3000",
+                value="300000",
                 help = "Coût annuel en OPEX sur la période",
                 key = f"montant opex {k}"
                 )),
@@ -343,7 +381,7 @@ st.plotly_chart(fig,use_container_width=True)
 with st.expander("Tableau bilan",False):
     st.dataframe(df,use_container_width=True)
 
-col1, col2, col3, col4 = st.columns([1,1,1,7])
+col1, col2, col3, col4 = st.columns([1,1,2,6])
 with col2:
     taux_actualisation = st.number_input(
         "Taux d'actualisation",
