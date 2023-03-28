@@ -41,6 +41,26 @@ with st.sidebar:
         VAN(r) = \sum_{t=n_{0}}^{N} \frac{CF_t}{(1+r)^t} =\sum_{t=n_{0}}^{N} \frac{Recette_t-Dépense_t}{(1+r)^t}
         '''
     )
+    st.markdown(
+        '''
+        $CF_t$ indique le cash flow du projet pendant l'année $t$
+        '''
+    )
+    st.markdown(
+    '''
+    Le <u>taux de rendement interne</u> est le taux d'actualisation (r) qui annule la valeur actualisée nette.<br>
+    ''',unsafe_allow_html=True
+    )
+    st.markdown(
+    '''
+    Le <u>Levelized cost of electricity</u> pour un taux d'actualisation (r) peut s'interpréter comme le prix de vente de l'électricité qui annule la VAN avec le taux r.
+    ''',unsafe_allow_html=True
+    )
+    st.latex(
+        r'''
+        LCOE(r) = \sum_{t=n_{0}}^{N} \frac{Recette_t-Dépense_t}{(1+r)^t}
+        '''
+    )
 
 row0_spacer1, row0_1, row0_2, row0_spacer3 = st.columns((.1, 1.5, 1.0, .1))
 with row0_1:
