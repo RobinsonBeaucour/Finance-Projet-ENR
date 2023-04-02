@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
-from relife import Weibull
+# from relife import Weibull
 pd.options.plotting.backend = "plotly"
 
 class Dette:
