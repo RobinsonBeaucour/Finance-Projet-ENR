@@ -41,6 +41,34 @@ with st.sidebar:
         VAN(r) = \sum_{t=n_{0}}^{N} \frac{CF_t}{(1+r)^t} =\sum_{t=n_{0}}^{N} \frac{Recette_t-Dépense_t}{(1+r)^t}
         '''
     )
+    st.markdown(
+        '''
+        Où $CF_t$ représente le cash flow du projet vers l'entité (négatif en cas de dépense pour le projet, positif en cas de recette depuis le projet)
+        '''
+    )
+    st.markdown(
+        '''
+        ## LCOE
+        '''
+    )
+    st.markdown(
+        '''
+        Dans sa version la plus systématique, le <u>coût moyen actualisé de l'électricité (LCOE)</u> consiste, sur le cycle de vie du mode de production, à diviser la somme actualisée de toutes les dépenses par la somme actualisée (par un taux ($r$) des productions
+        annuelles. (voir équation)
+        ''',
+        unsafe_allow_html=True
+    )
+    st.latex(
+        r'''
+        LCOE(r) = \frac{\sum_{t=n_{0}}^{N} \frac{Dépense_t}{(1+r)^t}}{\sum_{t=n_{0}}^{N} \frac{E_t}{(1+r)^t}}
+        '''
+    )
+    with st.expander("Interprétation",False):
+        st.markdown(
+            '''
+            Le résultat par MWh, correspond à la rémunération unitaire, qui permettra aux recettes de production de couvrir la totalité des coûts à décaisser, charges postérieures à l’exploitation comprises. Autrement dit, le LCOE est le prix de vente qui annule la VAN du porteur de projet pour un taux $r$, si un porteur de projet cherche un rendement $r$ il cherchera à vendre au LCOE($r$)
+            '''
+        )
 
 row0_spacer1, row0_1, row0_2, row0_spacer3 = st.columns((.1, 1.5, 1.0, .1))
 with row0_1:
@@ -178,7 +206,7 @@ with cols[2]:
             list_prod.append(
                 Production(
                 Nb_heures=st.number_input(
-                "Nombre d'heures à puissance nomnale",
+                "Nombre d'heures à puissance nomirnale",
                 min_value=0,
                 max_value=8760,
                 step=100,
