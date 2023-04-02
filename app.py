@@ -5,7 +5,7 @@ import numpy_financial as npf
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
-from relife import Weibull
+# from relife import Weibull
 from utils import *
 pd.options.plotting.backend = "plotly"
 
