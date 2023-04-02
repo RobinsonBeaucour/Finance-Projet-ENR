@@ -168,7 +168,7 @@ with cols[1]:
                 Opex(
                 montant= -float(st.text_input(
                 "Montant",
-                value="300000",
+                value="3000000",
                 help = "Coût annuel en OPEX sur la période",
                 key = f"montant opex {k}"
                 )),
