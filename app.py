@@ -43,7 +43,6 @@ with st.sidebar:
     )
     st.markdown(
         '''
-<<<<<<< HEAD
         Où $CF_t$ représente le cash flow du projet vers l'entité (négatif en cas de dépense pour le projet, positif en cas de recette depuis le projet)
         '''
     )
@@ -70,26 +69,6 @@ with st.sidebar:
             Le résultat par MWh, correspond à la rémunération unitaire, qui permettra aux recettes de production de couvrir la totalité des coûts à décaisser, charges postérieures à l’exploitation comprises. Autrement dit, le LCOE est le prix de vente qui annule la VAN du porteur de projet pour un taux $r$, si un porteur de projet cherche un rendement $r$ il cherchera à vendre au LCOE($r$)
             '''
         )
-=======
-        $CF_t$ indique le cash flow du projet pendant l'année $t$
-        '''
-    )
-    st.markdown(
-    '''
-    Le <u>taux de rendement interne</u> est le taux d'actualisation (r) qui annule la valeur actualisée nette.<br>
-    ''',unsafe_allow_html=True
-    )
-    st.markdown(
-    '''
-    Le <u>Levelized cost of electricity</u> pour un taux d'actualisation (r) peut s'interpréter comme le prix de vente de l'électricité qui annule la VAN avec le taux r.
-    ''',unsafe_allow_html=True
-    )
-    st.latex(
-        r'''
-        LCOE(r) = \sum_{t=n_{0}}^{N} \frac{Recette_t-Dépense_t}{(1+r)^t}
-        '''
-    )
->>>>>>> 6ac0570b579db14b6689f151f454c7c24e61ae5c
 
 row0_spacer1, row0_1, row0_2, row0_spacer3 = st.columns((.1, 1.5, 1.0, .1))
 with row0_1:
