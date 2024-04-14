@@ -1,0 +1,429 @@
+docker build -f <name>.Dockerfile -t streamlit_lset:alpha_v0
+docker run -p 8502:8501 streamlit_lset:alpha_v0
+docker login -u robinsonpierremarc
+docker push robinsonpierremarc/streamlit_cea:alpha
+
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker build -f deux.DockerFile -t streamlit .
+[+] Building 123.1s (11/11) FINISHED                                                                     docker:default
+ => [internal] load build definition from deux.DockerFile                                                          0.1s
+ => => transferring dockerfile: 362B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                     2.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/6] FROM docker.io/library/python:3.10@sha256:f68383667ffe53e85cc0fe4f5a604d303dfa364f238ac37a4675980a2b93  59.9s
+ => => resolve docker.io/library/python:3.10@sha256:f68383667ffe53e85cc0fe4f5a604d303dfa364f238ac37a4675980a2b93b  0.0s
+ => => sha256:cf5cac6010f4caa5446516c18f48369215df2e912a12ff314ceb9a1d95a5fd60 2.01kB / 2.01kB                     0.0s
+ => => sha256:08678661b65f014b9034af64927048ed49d60599377ca0f9a12afce7e232d40e 7.33kB / 7.33kB                     0.0s
+ => => sha256:f68383667ffe53e85cc0fe4f5a604d303dfa364f238ac37a4675980a2b93b1c5 1.65kB / 1.65kB                     0.0s
+ => => sha256:609c73876867487da051ad470002217da69bb052e2538710ade0730d893ff51f 49.56MB / 49.56MB                   9.1s
+ => => sha256:7247ea8d81e671d079d67f3a9909315ef4641b45db90d62a1b18e3430c1937d4 24.05MB / 24.05MB                   5.3s
+ => => sha256:be374d06f38273b62ddd7aa5bc3ce3f9c781fd49a1f5a5dd94a46d2986920d7a 64.14MB / 64.14MB                  13.2s
+ => => sha256:b4580645a8e50b87a19330da289a9b1540022379f2c99d3f0112e3c5c4a8d051 211.14MB / 211.14MB                30.0s
+ => => sha256:aa7e0aca67ddfc342e2afe83df590a0e228e34781e7206639ddd9da72a71a0af 6.39MB / 6.39MB                    11.1s
+ => => extracting sha256:609c73876867487da051ad470002217da69bb052e2538710ade0730d893ff51f                         11.1s
+ => => sha256:9190bf2a489b4146b995c56f230856134d7a99fb232f66f44a13be9fb580362b 17.15MB / 17.15MB                  15.2s
+ => => sha256:af55a6c6f99c4e6ecd2daccdd636f3a02b9cd48f9d30ad65830c91bcf012b3d5 245B / 245B                        13.5s
+ => => sha256:188ef716c498535fed4b6325683ae0549788532ab60ddd5fca4a6ca7d021ce8b 3.08MB / 3.08MB                    14.8s
+ => => extracting sha256:7247ea8d81e671d079d67f3a9909315ef4641b45db90d62a1b18e3430c1937d4                          2.8s
+ => => extracting sha256:be374d06f38273b62ddd7aa5bc3ce3f9c781fd49a1f5a5dd94a46d2986920d7a                          8.6s
+ => => extracting sha256:b4580645a8e50b87a19330da289a9b1540022379f2c99d3f0112e3c5c4a8d051                         18.9s
+ => => extracting sha256:aa7e0aca67ddfc342e2afe83df590a0e228e34781e7206639ddd9da72a71a0af                          0.5s
+ => => extracting sha256:9190bf2a489b4146b995c56f230856134d7a99fb232f66f44a13be9fb580362b                          0.9s
+ => => extracting sha256:af55a6c6f99c4e6ecd2daccdd636f3a02b9cd48f9d30ad65830c91bcf012b3d5                          0.0s
+ => => extracting sha256:188ef716c498535fed4b6325683ae0549788532ab60ddd5fca4a6ca7d021ce8b                          0.6s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 92B                                                                                   0.0s
+ => [2/6] WORKDIR /app                                                                                             2.4s
+ => [3/6] COPY app.py /app                                                                                         0.7s
+ => [4/6] COPY utils.py /app                                                                                       0.7s
+ => [5/6] COPY requirements.txt /app                                                                               0.3s
+ => [6/6] RUN pip3 install -r requirements.txt                                                                    48.9s
+ => exporting to image                                                                                             7.0s
+ => => exporting layers                                                                                            6.8s
+ => => writing image sha256:3db9bfdc4027a659379616e39f03843d379ddf123578da8603599a99a39778c0                       0.1s
+ => => naming to docker.io/library/streamlit                                                                       0.2s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run -p 8502:8501 streamlit
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8501
+
+^C  Stopping...
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker build -f deux.DockerFile -t streamlit_cea:alpha .
+[+] Building 2.9s (11/11) FINISHED                                                                       docker:default
+ => [internal] load build definition from deux.DockerFile                                                          0.2s
+ => => transferring dockerfile: 362B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/python:3.10                                                     1.4s
+ => [internal] load .dockerignore                                                                                  0.2s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/6] FROM docker.io/library/python:3.10@sha256:f68383667ffe53e85cc0fe4f5a604d303dfa364f238ac37a4675980a2b93b  0.0s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 92B                                                                                   0.0s
+ => CACHED [2/6] WORKDIR /app                                                                                      0.0s
+ => CACHED [3/6] COPY app.py /app                                                                                  0.0s
+ => CACHED [4/6] COPY utils.py /app                                                                                0.0s
+ => CACHED [5/6] COPY requirements.txt /app                                                                        0.0s
+ => CACHED [6/6] RUN pip3 install -r requirements.txt                                                              0.0s
+ => exporting to image                                                                                             0.1s
+ => => exporting layers                                                                                            0.0s
+ => => writing image sha256:3db9bfdc4027a659379616e39f03843d379ddf123578da8603599a99a39778c0                       0.0s
+ => => naming to docker.io/library/streamlit_cea:alpha                                                             0.1s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker ls
+docker: 'ls' is not a docker command.
+See 'docker --help'
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY      TAG       IMAGE ID       CREATED         SIZE
+streamlit       latest    3db9bfdc4027   3 minutes ago   1.83GB
+streamlit_cea   alpha     3db9bfdc4027   3 minutes ago   1.83GB
+<none>          <none>    18c72881c79a   6 weeks ago     1.83GB
+<none>          <none>    5428227f0ce1   6 weeks ago     1.83GB
+<none>          <none>    0dab9c6154bb   6 weeks ago     1.83GB
+<none>          <none>    3ed7b75c83f1   6 weeks ago     1.54GB
+<none>          <none>    820a68cf365a   6 weeks ago     1.54GB
+debian          latest    e3cbd207d8e5   2 months ago    117MB
+nginx           latest    b690f5f0a2d5   5 months ago    187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker login -u robinsonpierremarc
+Password:
+Login Succeeded
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker tag streamlit_cea:alpha robinsonpierremarc/streamlit_cea:alpha
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker push robinsonpierremarc/streamlit_cea:alpha
+The push refers to repository [docker.io/robinsonpierremarc/streamlit_cea]
+4d4463f8210e: Pushed
+02991cc9fddc: Pushed
+5b9b68fc328f: Pushed
+e4634cc63445: Pushed
+723dc77dc6d1: Pushed
+6c3f50737689: Mounted from library/python
+5268108732cc: Mounted from library/python
+911a0b8225f2: Mounted from library/python
+86388e04a96b: Mounted from library/python
+893507f6057f: Mounted from library/python
+2353f7120e0e: Mounted from library/python
+51a9318e6edf: Mounted from library/python
+c5bb35826823: Mounted from library/python
+alpha: digest: sha256:f6c02ddf19a1342bd051ab0fe82c230f8fb4b2c2c50e79506de65bca4c13a9d5 size: 3048
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
+robinsonpierremarc/streamlit_cea   alpha     3db9bfdc4027   13 minutes ago   1.83GB
+streamlit                          latest    3db9bfdc4027   13 minutes ago   1.83GB
+streamlit_cea                      alpha     3db9bfdc4027   13 minutes ago   1.83GB
+<none>                             <none>    0dab9c6154bb   6 weeks ago      1.83GB
+<none>                             <none>    18c72881c79a   6 weeks ago      1.83GB
+<none>                             <none>    5428227f0ce1   6 weeks ago      1.83GB
+<none>                             <none>    820a68cf365a   6 weeks ago      1.54GB
+<none>                             <none>    3ed7b75c83f1   6 weeks ago      1.54GB
+debian                             latest    e3cbd207d8e5   2 months ago     117MB
+nginx                              latest    b690f5f0a2d5   5 months ago     187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi $(docker images -a -q)
+Error response from daemon: conflict: unable to delete 3db9bfdc4027 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete 3db9bfdc4027 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete 3db9bfdc4027 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete 0dab9c6154bb (must be forced) - image is being used by stopped container cbf7ff277e02
+Error response from daemon: conflict: unable to delete 18c72881c79a (must be forced) - image is being used by stopped container 6ce94d5f8d52
+Error response from daemon: conflict: unable to delete 5428227f0ce1 (must be forced) - image is being used by stopped container cf2841e4c2f5
+Error response from daemon: conflict: unable to delete 3ed7b75c83f1 (must be forced) - image is being used by stopped container e3081f7a80dd
+Error response from daemon: conflict: unable to delete 820a68cf365a (must be forced) - image is being used by stopped container fa61552ce05e
+Error response from daemon: conflict: unable to delete e3cbd207d8e5 (must be forced) - image is being used by stopped container 10cbd5d3c995
+Error response from daemon: conflict: unable to delete b690f5f0a2d5 (must be forced) - image is being used by stopped container 24da9cb11663
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi $(docker images -a -q)
+Error response from daemon: conflict: unable to delete 3db9bfdc4027 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete 3db9bfdc4027 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete 3db9bfdc4027 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete 5428227f0ce1 (must be forced) - image is being used by stopped container cf2841e4c2f5
+Error response from daemon: conflict: unable to delete 0dab9c6154bb (must be forced) - image is being used by stopped container cbf7ff277e02
+Error response from daemon: conflict: unable to delete 18c72881c79a (must be forced) - image is being used by stopped container 6ce94d5f8d52
+Error response from daemon: conflict: unable to delete 820a68cf365a (must be forced) - image is being used by stopped container dc9badb1da83
+Error response from daemon: conflict: unable to delete 3ed7b75c83f1 (must be forced) - image is being used by stopped container e3081f7a80dd
+Error response from daemon: conflict: unable to delete e3cbd207d8e5 (must be forced) - image is being used by stopped container 10cbd5d3c995
+Error response from daemon: conflict: unable to delete b690f5f0a2d5 (must be forced) - image is being used by stopped container 24da9cb11663
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi $(docker images -f "dangling=true" -q)
+Error response from daemon: conflict: unable to delete 0dab9c6154bb (must be forced) - image is being used by stopped container cbf7ff277e02
+Error response from daemon: conflict: unable to delete 18c72881c79a (must be forced) - image is being used by stopped container 6ce94d5f8d52
+Error response from daemon: conflict: unable to delete 5428227f0ce1 (must be forced) - image is being used by stopped container cf2841e4c2f5
+Error response from daemon: conflict: unable to delete 3ed7b75c83f1 (must be forced) - image is being used by stopped container e3081f7a80dd
+Error response from daemon: conflict: unable to delete 820a68cf365a (must be forced) - image is being used by stopped container aa9d794a8cce
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi $(docker images -a -q -f)
+flag needs an argument: 'f' in -f
+See 'docker images --help'.
+"docker rmi" requires at least 1 argument.
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
+streamlit                          latest    3db9bfdc4027   14 minutes ago   1.83GB
+streamlit_cea                      alpha     3db9bfdc4027   14 minutes ago   1.83GB
+robinsonpierremarc/streamlit_cea   alpha     3db9bfdc4027   14 minutes ago   1.83GB
+<none>                             <none>    0dab9c6154bb   6 weeks ago      1.83GB
+<none>                             <none>    18c72881c79a   6 weeks ago      1.83GB
+<none>                             <none>    5428227f0ce1   6 weeks ago      1.83GB
+<none>                             <none>    3ed7b75c83f1   6 weeks ago      1.54GB
+<none>                             <none>    820a68cf365a   6 weeks ago      1.54GB
+debian                             latest    e3cbd207d8e5   2 months ago     117MB
+nginx                              latest    b690f5f0a2d5   5 months ago     187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker stop $(docker ps -a -q)
+5a5300a4ab15
+6ce94d5f8d52
+cf2841e4c2f5
+cbf7ff277e02
+57b3fa5db082
+dc9badb1da83
+86ee55b27e66
+2877dd1f9313
+984e96b23f7e
+fad457ba36f1
+fa61552ce05e
+8b461bb6ca55
+e3081f7a80dd
+eb8d116e96d6
+aa9d794a8cce
+7873f5d8bc97
+10cbd5d3c995
+4766ea015ba5
+24da9cb11663
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi $(docker images -f "dangling=true" -q)
+Error response from daemon: conflict: unable to delete 0dab9c6154bb (must be forced) - image is being used by stopped container cbf7ff277e02
+Error response from daemon: conflict: unable to delete 18c72881c79a (must be forced) - image is being used by stopped container 6ce94d5f8d52
+Error response from daemon: conflict: unable to delete 5428227f0ce1 (must be forced) - image is being used by stopped container cf2841e4c2f5
+Error response from daemon: conflict: unable to delete 3ed7b75c83f1 (must be forced) - image is being used by stopped container eb8d116e96d6
+Error response from daemon: conflict: unable to delete 820a68cf365a (must be forced) - image is being used by stopped container 8b461bb6ca55
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi --force 5428227f0ce1
+Deleted: sha256:5428227f0ce1a663fb3ec491c3be1ab7766b3362e8c8342ef0a80a5f017b5f3e
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
+streamlit                          latest    3db9bfdc4027   15 minutes ago   1.83GB
+streamlit_cea                      alpha     3db9bfdc4027   15 minutes ago   1.83GB
+robinsonpierremarc/streamlit_cea   alpha     3db9bfdc4027   15 minutes ago   1.83GB
+<none>                             <none>    0dab9c6154bb   6 weeks ago      1.83GB
+<none>                             <none>    18c72881c79a   6 weeks ago      1.83GB
+<none>                             <none>    3ed7b75c83f1   6 weeks ago      1.54GB
+<none>                             <none>    820a68cf365a   6 weeks ago      1.54GB
+debian                             latest    e3cbd207d8e5   2 months ago     117MB
+nginx                              latest    b690f5f0a2d5   5 months ago     187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi --force 3ed7b75c83f1
+Deleted: sha256:3ed7b75c83f181bc13f6315538588fb95c6db6242df34eb9a7dfc7f22040c9cc
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi --force 0dab9c6154bb
+Deleted: sha256:0dab9c6154bb7fef2b5da9141d89f5c5a73197f8d5408af6ea4a1910616be4ed
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
+streamlit                          latest    3db9bfdc4027   16 minutes ago   1.83GB
+streamlit_cea                      alpha     3db9bfdc4027   16 minutes ago   1.83GB
+robinsonpierremarc/streamlit_cea   alpha     3db9bfdc4027   16 minutes ago   1.83GB
+<none>                             <none>    18c72881c79a   6 weeks ago      1.83GB
+<none>                             <none>    820a68cf365a   6 weeks ago      1.54GB
+debian                             latest    e3cbd207d8e5   2 months ago     117MB
+nginx                              latest    b690f5f0a2d5   5 months ago     187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker rmi --force 3db9bfdc4027
+Untagged: streamlit:latest
+Untagged: streamlit_cea:alpha
+Untagged: robinsonpierremarc/streamlit_cea:alpha
+Untagged: robinsonpierremarc/streamlit_cea@sha256:f6c02ddf19a1342bd051ab0fe82c230f8fb4b2c2c50e79506de65bca4c13a9d5
+Deleted: sha256:3db9bfdc4027a659379616e39f03843d379ddf123578da8603599a99a39778c0
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+<none>       <none>    18c72881c79a   6 weeks ago    1.83GB
+<none>       <none>    820a68cf365a   6 weeks ago    1.54GB
+debian       latest    e3cbd207d8e5   2 months ago   117MB
+nginx        latest    b690f5f0a2d5   5 months ago   187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker pull robinsonpierremarc/streamlit_cea:alpha
+alpha: Pulling from robinsonpierremarc/streamlit_cea
+609c73876867: Already exists
+7247ea8d81e6: Already exists
+be374d06f382: Already exists
+b4580645a8e5: Already exists
+aa7e0aca67dd: Already exists
+9190bf2a489b: Already exists
+af55a6c6f99c: Already exists
+188ef716c498: Already exists
+3c93f570c8e3: Already exists
+87d1efc60014: Already exists
+1e5c2d43ca1c: Already exists
+38e03e54de87: Already exists
+2df5bf00f04c: Already exists
+Digest: sha256:f6c02ddf19a1342bd051ab0fe82c230f8fb4b2c2c50e79506de65bca4c13a9d5
+Status: Downloaded newer image for robinsonpierremarc/streamlit_cea:alpha
+docker.io/robinsonpierremarc/streamlit_cea:alpha
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview robinsonpierremarc/streamlit_cea:alpha
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker image ls
+REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
+robinsonpierremarc/streamlit_cea   alpha     3db9bfdc4027   18 minutes ago   1.83GB
+<none>                             <none>    18c72881c79a   6 weeks ago      1.83GB
+<none>                             <none>    820a68cf365a   6 weeks ago      1.54GB
+debian                             latest    e3cbd207d8e5   2 months ago     117MB
+nginx                              latest    b690f5f0a2d5   5 months ago     187MB
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run -h
+flag needs an argument: 'h' in -h
+See 'docker run --help'.
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run --help
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+
+Aliases:
+  docker container run, docker run
+
+Options:
+      --add-host list                    Add a custom host-to-IP mapping (host:ip)
+      --annotation map                   Add an annotation to the container (passed through to the OCI runtime)
+                                         (default map[])
+  -a, --attach list                      Attach to STDIN, STDOUT or STDERR
+      --blkio-weight uint16              Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0)
+      --blkio-weight-device list         Block IO weight (relative device weight) (default [])
+      --cap-add list                     Add Linux capabilities
+      --cap-drop list                    Drop Linux capabilities
+      --cgroup-parent string             Optional parent cgroup for the container
+      --cgroupns string                  Cgroup namespace to use (host|private)
+                                         'host':    Run the container in the Docker host's cgroup namespace
+                                         'private': Run the container in its own private cgroup namespace
+                                         '':        Use the cgroup namespace as configured by the
+                                                    default-cgroupns-mode option on the daemon (default)
+      --cidfile string                   Write the container ID to the file
+      --cpu-period int                   Limit CPU CFS (Completely Fair Scheduler) period
+      --cpu-quota int                    Limit CPU CFS (Completely Fair Scheduler) quota
+      --cpu-rt-period int                Limit CPU real-time period in microseconds
+      --cpu-rt-runtime int               Limit CPU real-time runtime in microseconds
+  -c, --cpu-shares int                   CPU shares (relative weight)
+      --cpus decimal                     Number of CPUs
+      --cpuset-cpus string               CPUs in which to allow execution (0-3, 0,1)
+      --cpuset-mems string               MEMs in which to allow execution (0-3, 0,1)
+  -d, --detach                           Run container in background and print container ID
+      --detach-keys string               Override the key sequence for detaching a container
+      --device list                      Add a host device to the container
+      --device-cgroup-rule list          Add a rule to the cgroup allowed devices list
+      --device-read-bps list             Limit read rate (bytes per second) from a device (default [])
+      --device-read-iops list            Limit read rate (IO per second) from a device (default [])
+      --device-write-bps list            Limit write rate (bytes per second) to a device (default [])
+      --device-write-iops list           Limit write rate (IO per second) to a device (default [])
+      --disable-content-trust            Skip image verification (default true)
+      --dns list                         Set custom DNS servers
+      --dns-option list                  Set DNS options
+      --dns-search list                  Set custom DNS search domains
+      --domainname string                Container NIS domain name
+      --entrypoint string                Overwrite the default ENTRYPOINT of the image
+  -e, --env list                         Set environment variables
+      --env-file list                    Read in a file of environment variables
+      --expose list                      Expose a port or a range of ports
+      --gpus gpu-request                 GPU devices to add to the container ('all' to pass all GPUs)
+      --group-add list                   Add additional groups to join
+      --health-cmd string                Command to run to check health
+      --health-interval duration         Time between running the check (ms|s|m|h) (default 0s)
+      --health-retries int               Consecutive failures needed to report unhealthy
+      --health-start-interval duration   Time between running the check during the start period (ms|s|m|h)
+                                         (default 0s)
+      --health-start-period duration     Start period for the container to initialize before starting
+                                         health-retries countdown (ms|s|m|h) (default 0s)
+      --health-timeout duration          Maximum time to allow one check to run (ms|s|m|h) (default 0s)
+      --help                             Print usage
+  -h, --hostname string                  Container host name
+      --init                             Run an init inside the container that forwards signals and reaps processes
+  -i, --interactive                      Keep STDIN open even if not attached
+      --ip string                        IPv4 address (e.g., 172.30.100.104)
+      --ip6 string                       IPv6 address (e.g., 2001:db8::33)
+      --ipc string                       IPC mode to use
+      --isolation string                 Container isolation technology
+      --kernel-memory bytes              Kernel memory limit
+  -l, --label list                       Set meta data on a container
+      --label-file list                  Read in a line delimited file of labels
+      --link list                        Add link to another container
+      --link-local-ip list               Container IPv4/IPv6 link-local addresses
+      --log-driver string                Logging driver for the container
+      --log-opt list                     Log driver options
+      --mac-address string               Container MAC address (e.g., 92:d0:c6:0a:29:33)
+  -m, --memory bytes                     Memory limit
+      --memory-reservation bytes         Memory soft limit
+      --memory-swap bytes                Swap limit equal to memory plus swap: '-1' to enable unlimited swap
+      --memory-swappiness int            Tune container memory swappiness (0 to 100) (default -1)
+      --mount mount                      Attach a filesystem mount to the container
+      --name string                      Assign a name to the container
+      --network network                  Connect a container to a network
+      --network-alias list               Add network-scoped alias for the container
+      --no-healthcheck                   Disable any container-specified HEALTHCHECK
+      --oom-kill-disable                 Disable OOM Killer
+      --oom-score-adj int                Tune host's OOM preferences (-1000 to 1000)
+      --pid string                       PID namespace to use
+      --pids-limit int                   Tune container pids limit (set -1 for unlimited)
+      --platform string                  Set platform if server is multi-platform capable
+      --privileged                       Give extended privileges to this container
+  -p, --publish list                     Publish a container's port(s) to the host
+  -P, --publish-all                      Publish all exposed ports to random ports
+      --pull string                      Pull image before running ("always", "missing", "never") (default "missing")
+  -q, --quiet                            Suppress the pull output
+      --read-only                        Mount the container's root filesystem as read only
+      --restart string                   Restart policy to apply when a container exits (default "no")
+      --rm                               Automatically remove the container when it exits
+      --runtime string                   Runtime to use for this container
+      --security-opt list                Security Options
+      --shm-size bytes                   Size of /dev/shm
+      --sig-proxy                        Proxy received signals to the process (default true)
+      --stop-signal string               Signal to stop the container
+      --stop-timeout int                 Timeout (in seconds) to stop a container
+      --storage-opt list                 Storage driver options for the container
+      --sysctl map                       Sysctl options (default map[])
+      --tmpfs list                       Mount a tmpfs directory
+  -t, --tty                              Allocate a pseudo-TTY
+      --ulimit ulimit                    Ulimit options (default [])
+  -u, --user string                      Username or UID (format: <name|uid>[:<group|gid>])
+      --userns string                    User namespace to use
+      --uts string                       UTS namespace to use
+  -v, --volume list                      Bind mount a volume
+      --volume-driver string             Optional volume driver for the container
+      --volumes-from list                Mount volumes from the specified container(s)
+  -w, --workdir string                   Working directory inside the container
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run -d pierremarcemile/streamlit_cea:alpha
+Unable to find image 'pierremarcemile/streamlit_cea:alpha' locally
+docker: Error response from daemon: pull access denied for pierremarcemile/streamlit_cea, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run robinsonpierremarc/streamlit_cea:alpha -d
+Usage: streamlit run [OPTIONS] TARGET [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: No such option: -d
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run robinsonpierremarc/streamlit_cea:alpha
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8501
+
+^C  Stopping...
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ docker run -p 8501:8501 robinsonpierremarc/streamlit_cea:alp
+ha
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8501
+
+^C  Stopping...
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$ script my_log_file.txt
+Script started, output log file is 'my_log_file.txt'.
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$
+exit
+Script done.
+robinsonbeaucour@LAPTOP-4F74L8CS:/mnt/c/Finance-Projet-ENR$
+
+
